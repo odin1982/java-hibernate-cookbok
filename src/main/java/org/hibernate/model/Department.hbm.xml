@@ -1,0 +1,12 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	<!--Root element that contains all the class elements -->
+    <hibernate-mapping>
+    	<class name="Department" table="department">
+    		<id name="id" type="long" column="id">
+    			<generator class="identity"/>
+    		</id>
+    		<property name="deptName" column="deptName"></property>
+    	</class>
+    </hibernate-mapping>
