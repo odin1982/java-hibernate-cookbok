@@ -3,13 +3,13 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 	<!--Root element that contains all the class elements -->
     <hibernate-mapping>
-    	<class name="Employee" table="employee">
+    	<class name="org.hibernate.model.Employee" table="employee">
     		<id name="id" type="long" column="id">
     			<generator class="identity"/>
     		</id>
     		<property name="firstName" column="firstName"></property>
     		<property name="salary" column="salary"></property>
-    		<many-to-one name="department" class="Department">
+    		<many-to-one name="department" class="org.hibernate.model.Department">
     			<column name="department"/>
     		</many-to-one>
     	</class>

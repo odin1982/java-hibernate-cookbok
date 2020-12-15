@@ -3,7 +3,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 	<!--Root element that contains all the class elements -->
     <hibernate-mapping>
-    	<class name="Department" table="department">
+    	<class name="org.hibernate.model.Department" table="department">
     		<id name="id" type="long" column="id">
     			<generator class="identity"/>
     		</id>

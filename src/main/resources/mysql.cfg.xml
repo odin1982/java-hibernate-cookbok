@@ -1,0 +1,20 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+    
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL55Dialect</property>
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/jhibernatecookbook?useSSL=false&amp;serverTimezone=America/Mexico_City&amp;allowPublicKeyRetrieval=true</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">barcelona8</property>
+		<property name="show_sql">true</property>
+		<property name="hibernate.format_sql">true</property><!-- pretty format hibernate queries -->
+		<!--Possible values: validate,update,create,create-drop -->
+		<property name="hbm2ddl.auto">create-drop</property>
+		<!-- List of XML ampping files -->
+		<mapping resource="org/hibernate/model/Employee.hbm.xml"/>
+		<mapping resource="org/hibernate/model/Department.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>
