@@ -20,6 +20,14 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.22</version>
 		</dependency>
+		
+		<!-- POSTGRESQL Connector -->
+		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.2.14</version><!--$NO-MVN-MAN-VER$ -->
+		</dependency>
 
 		<!-- Hibernate Core -->
 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
