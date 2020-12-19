@@ -21,7 +21,5 @@ public class UpdatingObject {
 		
 		session.getTransaction().commit();
 		HibernateUtil.shutdown();
-		
-		
 	}
 }
