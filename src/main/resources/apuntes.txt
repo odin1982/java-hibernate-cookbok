@@ -10,3 +10,11 @@ Hibernate Mapping
 <!DOCTYPE hibernate-mapping PUBLIC 
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    
+    
+Session get()
+	Trae null si no existe el objeto.
+
+Session load() 
+Primero revisa en el cache si esta el objeto si esta lo trae sino va  ala BD y lo obtiene.
