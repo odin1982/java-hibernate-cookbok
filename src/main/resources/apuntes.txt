@@ -18,3 +18,8 @@ Session get()
 
 Session load() 
 Primero revisa en el cache si esta el objeto si esta lo trae sino va  ala BD y lo obtiene.
+
+
+Projection
+ Es una clase que nos provee Hibernate para seleccionar un campo en particular mientras estamos haciendo un query.
+ 
