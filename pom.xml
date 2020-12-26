@@ -5,7 +5,7 @@
 	<groupId>org.hibernate</groupId>
 	<artifactId>java-hibernate-cookbook</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	
+
 	<!-- Java 8 -->
 	<properties>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -20,7 +20,7 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.22</version>
 		</dependency>
-		
+
 		<!-- POSTGRESQL Connector -->
 		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
 		<dependency>
@@ -52,9 +52,5 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.11</version>
 		</dependency>
-
-
-
-
 	</dependencies>
 </project>
