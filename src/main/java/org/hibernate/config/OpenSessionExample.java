@@ -1,8 +1,7 @@
-package org.hibernate.test;
+package org.hibernate.config;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.config.HibernateUtil;
 
 public class OpenSessionExample {
 	public static void main(String[] args) {
