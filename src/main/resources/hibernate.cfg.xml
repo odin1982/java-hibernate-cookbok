@@ -12,7 +12,7 @@
 		<property name="show_sql">true</property>
 		<property name="hibernate.format_sql">true</property><!-- pretty format hibernate queries -->
 		<!--Possible values: validate,update,create,create-drop -->
-		<property name="hbm2ddl.auto">create</property>
+		<property name="hbm2ddl.auto">update</property>
 		<mapping class="org.hibernate.model.Department"/>
   		<mapping class="org.hibernate.model.Employee"/>
   		<mapping class="org.hibernate.model.Escuela"/>
