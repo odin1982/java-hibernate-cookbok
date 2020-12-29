@@ -25,5 +25,7 @@
   		<mapping class="org.hibernate.model.Programador"/>
   		<mapping class="org.hibernate.model.Person"/>
   		<mapping class="org.hibernate.model.PassportDetail"/>
+  		<mapping class="org.hibernate.model.Actor"/>
+  		<mapping class="org.hibernate.model.Movie"/>
 	</session-factory>
 </hibernate-configuration>
