@@ -1,23 +1,14 @@
 select * from employee;
 select * from department;
-select * from tbl_escuela;
-select * from estudiante;
-select * from email;
-select * from degree;
-select * from teacher;
 
-select
-        this_.id as id1_1_1_,
-        this_.department as departme5_1_1_,
-        this_.emp_code as emp_code2_1_1_,
-        this_.firstname as firstnam3_1_1_,
-        this_.salary as salary4_1_1_,
-        department2_.id as id1_0_0_,
-        department2_.deptName as deptname2_0_0_ 
-    from
-        employee this_ 
-    left outer join
-        department department2_ 
-            on this_.department=department2_.id 
-    order by
-        this_.firstname desc;
+INSERT INTO `jhibernatecookbook`.`employee` (`id_employee`, `id_department`, `name`) VALUES ('1', '1', 'odin');
+INSERT INTO `jhibernatecookbook`.`employee` (`id_employee`, `id_department`, `name`) VALUES ('2', '1', 'amaya');
+INSERT INTO `jhibernatecookbook`.`employee` (`id_employee`, `id_department`, `name`) VALUES ('3', '1', 'sandra');
+INSERT INTO `jhibernatecookbook`.`employee` (`id_employee`, `id_department`, `name`) VALUES ('4', '2', 'minerva');
+INSERT INTO `jhibernatecookbook`.`employee` (`id_employee`, `id_department`, `name`) VALUES ('5', '2', 'esteban');
+INSERT INTO `jhibernatecookbook`.`employee` (`id_employee`, `id_department`, `name`) VALUES ('6', '3', 'hugo');
+INSERT INTO `jhibernatecookbook`.`employee` (`id_employee`, `id_department`, `name`) VALUES ('6', '3', 'gaby');
+
+INSERT INTO `jhibernatecookbook`.`department` (`id_department`, `name`) VALUES ('1', 'tizayuca');
+INSERT INTO `jhibernatecookbook`.`department` (`id_department`, `name`) VALUES ('2', 'ecatepec');
+INSERT INTO `jhibernatecookbook`.`department` (`id_department`, `name`) VALUES ('3', 'palermo');

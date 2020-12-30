@@ -1,47 +1,63 @@
 package org.hibernate.model;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
-
 @Entity
-@Table(name="department")
+@Table(name = "department")
 public class Department {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="id")
-	private long id;
+	@Column(name="id_department")
+	private Long id;
 	
-	@Column(name="deptName")
-	private String deptName;
+	@Column(name="name")
+	private String name;
 	
-	public Department() {}
+	@OneToMany(mappedBy = "department")
+	private Set<Employee> employees;
+	
+	@ManyToOne
+	@JoinColumn(name = "id_location")
+	private Location location;
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public String getDeptName() {
-		return deptName;
+	public String getName() {
+		return name;
 	}
 
-	public void setDeptName(String deptName) {
-		this.deptName = deptName;
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Set<Employee> getEmployees() {
+		return employees;
+	}
+
+	public void setEmployees(Set<Employee> employees) {
+		this.employees = employees;
 	}
 	
+	@Override
 	public String toString() {
-		return ToStringBuilder.reflectionToString(this,ToStringStyle.SHORT_PREFIX_STYLE);
+		return "Department [id=" + id + ", name=" + name + "]";
 	}
 	
 }

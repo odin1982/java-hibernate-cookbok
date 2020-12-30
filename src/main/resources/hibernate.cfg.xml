@@ -15,19 +15,6 @@
 		<property name="hbm2ddl.auto">update</property>
 		<mapping class="org.hibernate.model.Department"/>
   		<mapping class="org.hibernate.model.Employee"/>
-  		<mapping class="org.hibernate.model.Escuela"/>
-  		<mapping class="org.hibernate.model.Tienda"/>
-  		<mapping class="org.hibernate.model.Estudiante"/>
-  		<mapping class="org.hibernate.model.Teacher"/>
-  		<mapping class="org.hibernate.model.Degree"/>
-  		<mapping class="org.hibernate.model.Jugador"/>
-  		<mapping class="org.hibernate.model.Desarrollador"/>
-  		<mapping class="org.hibernate.model.Programador"/>
-  		<mapping class="org.hibernate.model.Person"/>
-  		<mapping class="org.hibernate.model.PassportDetail"/>
-  		<mapping class="org.hibernate.model.Actor"/>
-  		<mapping class="org.hibernate.model.Movie"/>
-  		<mapping class="org.hibernate.model.Developer"/>
-  		<mapping class="org.hibernate.model.Technology"/>
+  		<mapping class="org.hibernate.model.Location"/>
 	</session-factory>
 </hibernate-configuration>
