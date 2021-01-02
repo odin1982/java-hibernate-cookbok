@@ -16,5 +16,7 @@
 		<mapping class="org.hibernate.model.Department"/>
   		<mapping class="org.hibernate.model.Employee"/>
   		<mapping class="org.hibernate.model.Location"/>
+  		<mapping class="org.hibernate.model.Category"/>
+  		<mapping class="org.hibernate.model.Product"/>
 	</session-factory>
 </hibernate-configuration>

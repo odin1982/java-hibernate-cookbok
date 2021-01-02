@@ -12,3 +12,11 @@ INSERT INTO `jhibernatecookbook`.`employee` (`id_employee`, `id_department`, `na
 INSERT INTO `jhibernatecookbook`.`department` (`id_department`, `name`) VALUES ('1', 'tizayuca');
 INSERT INTO `jhibernatecookbook`.`department` (`id_department`, `name`) VALUES ('2', 'ecatepec');
 INSERT INTO `jhibernatecookbook`.`department` (`id_department`, `name`) VALUES ('3', 'palermo');
+
+
+INSERT INTO `jhibernatecookbook`.`product` (`name`, `price`, `category_id`) VALUES ('Meeting room table', '100.23', '1');
+INSERT INTO `jhibernatecookbook`.`product` (`name`, `price`, `category_id`) VALUES ('Metal bookcases', '120', '1');
+INSERT INTO `jhibernatecookbook`.`product` (`name`, `price`, `category_id`) VALUES ('Ligthning', '70.36', '1');
+INSERT INTO `jhibernatecookbook`.`product` (`name`, `price`, `category_id`) VALUES ('Business envelopes', '40.92', '2');
+INSERT INTO `jhibernatecookbook`.`product` (`name`, `price`, `category_id`) VALUES ('Paper clips', '20.61', '2');
+INSERT INTO `jhibernatecookbook`.`product` (`name`, `price`, `category_id`) VALUES ('HIghlighters', '30', '2');
