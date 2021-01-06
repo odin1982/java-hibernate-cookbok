@@ -7,8 +7,22 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+//namedquery example ony one
+//@NamedQuery(name="getCategoryNameByName",query="FROM Category c WHERE c.name=:name")
 
+@NamedQueries({
+	@NamedQuery(
+			name="getCategoryNameByName",
+			query="FROM Category c WHERE c.name=:name"
+	),
+	@NamedQuery(
+			name="getCategoryNameById",
+			query="FROM Category c WHERE c.id=:id"
+	)
+})
 @Entity
 @Table(name="category")
 public class Category {
