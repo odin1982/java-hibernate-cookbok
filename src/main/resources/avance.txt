@@ -1,1 +1,1 @@
-Performing aggregate operations
+Executing a Query using HQL
