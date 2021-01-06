@@ -11,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Formula;
+
 @Entity
 @Table(name="product")
 public class Product {
@@ -22,8 +24,14 @@ public class Product {
 	@Column(name="name")
 	private String name;
 	
+	@Formula("UPPER(name)")
+	private String capitalName;
+	
 	@Column(name="price")
 	private BigDecimal price;
+	
+	@Formula("(SELECT c.name FROM category c WHERE c.id=category_id)")
+	private String categoryName;
 	
 	@ManyToOne
 	@JoinColumn(name="category_id")
@@ -40,9 +48,25 @@ public class Product {
 	public String getName() {
 		return name;
 	}
-
+	
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public String getCapitalName() {
+		return capitalName;
+	}
+
+	public void setCapitalName(String capitalName) {
+		this.capitalName = capitalName;
+	}
+	
+	public String getCategoryName() {
+		return categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
 	}
 
 	public BigDecimal getPrice() {
