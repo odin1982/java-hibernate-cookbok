@@ -1,1 +1,1 @@
-Executing a Query using HQL
+Advanced Concepts
