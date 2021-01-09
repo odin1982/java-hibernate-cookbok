@@ -2,20 +2,24 @@ package org.hibernate.model;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
-
 @Entity
 @Table(name="employee")
-//@Cache(usage=CacheConcurrencyStrategy.READ_ONLY)
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="emp_type", discriminatorType = DiscriminatorType.STRING, length=2)
+@DiscriminatorValue(value="E")
 public class Employee {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -24,10 +28,6 @@ public class Employee {
 	
 	@Column(name="name")
 	private String name;
-	
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id_department")
-	private Department department;
 
 	public Long getId() {
 		return id;
@@ -37,12 +37,12 @@ public class Employee {
 		this.id = id;
 	}
 
-	public Department getDepartment() {
-		return department;
+	public String getName() {
+		return name;
 	}
 
-	public void setDepartment(Department department) {
-		this.department = department;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	@Override

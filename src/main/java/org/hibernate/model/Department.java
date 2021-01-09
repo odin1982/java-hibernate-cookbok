@@ -24,9 +24,6 @@ public class Department {
 	@Column(name="name")
 	private String name;
 	
-	@OneToMany(mappedBy = "department")
-	private Set<Employee> employees;
-	
 	@ManyToOne
 	@JoinColumn(name = "id_location")
 	private Location location;
@@ -45,14 +42,6 @@ public class Department {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public Set<Employee> getEmployees() {
-		return employees;
-	}
-
-	public void setEmployees(Set<Employee> employees) {
-		this.employees = employees;
 	}
 	
 	@Override
