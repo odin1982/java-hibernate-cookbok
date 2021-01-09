@@ -13,6 +13,7 @@
 		<property name="hibernate.format_sql">true</property><!-- pretty format hibernate queries -->
 		<!--Possible values: validate,update,create,create-drop -->
 		<property name="hbm2ddl.auto">update</property>
+		
 		<!-- Config ehcache  seconlevel cache -->
 <!-- 		<property name="hibernate.cache.use_second_level_cache">true</property> -->
 <!-- 		<property name="hibernate.cache.region.factory_class"> -->
