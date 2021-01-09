@@ -1,4 +1,4 @@
-package org.hibernate.strategy.inheritance;
+package org.hibernate.strategy.subclass.inheritance;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -7,7 +7,7 @@ import org.hibernate.model.ContractualEmployee;
 import org.hibernate.model.Employee;
 import org.hibernate.model.PermanentEmployee;
 
-public class StartegyInheritence {
+public class SubclassInheritance {
 	public static void main(String[] args) {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session = sessionFactory.openSession();
@@ -31,4 +31,5 @@ public class StartegyInheritence {
 		session.getTransaction().commit();
 		session.close();
 	}
+
 }
