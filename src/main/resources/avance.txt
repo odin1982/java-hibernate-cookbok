@@ -1,1 +1,1 @@
-Advanced Concepts
+working with the table per subclass strategy of inheritance

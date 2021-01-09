@@ -1,13 +1,13 @@
 package org.hibernate.model;
 
 import javax.persistence.Column;
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="employee")
-@DiscriminatorValue(value="CE")
+@Table(name="contractualEmployee")
+@PrimaryKeyJoinColumn(name="emp_id")
 public class ContractualEmployee extends Employee{
 	@Column(name="hourly_rate")
 	private Double HourlyRate;

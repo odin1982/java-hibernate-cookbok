@@ -17,9 +17,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="employee")
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="emp_type", discriminatorType = DiscriminatorType.STRING, length=2)
-@DiscriminatorValue(value="E")
+@Inheritance(strategy=InheritanceType.JOINED)
 public class Employee {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
