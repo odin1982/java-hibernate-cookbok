@@ -1,13 +1,17 @@
 package org.hibernate.model;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="permanentEmployee")
-@PrimaryKeyJoinColumn(name="emp_id")
+@AttributeOverrides({
+	@AttributeOverride(name="id",column=@Column(name="id")),
+	@AttributeOverride(name="name",column=@Column(name="name"))
+})
 public class PermanentEmployee extends Employee{
 	@Column(name="salary")
 	private Double salary;

@@ -17,11 +17,11 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="employee")
-@Inheritance(strategy=InheritanceType.JOINED)
+@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
 public class Employee {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="id_employee")
+	@GeneratedValue(strategy=GenerationType.TABLE)
+	@Column(name="id")
 	private Long id;
 	
 	@Column(name="name")
