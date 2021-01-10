@@ -6,10 +6,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Version;
+
+import org.hibernate.envers.Audited;
+import org.hibernate.envers.NotAudited;
+
 
 @Entity
 @Table(name="employee")
+@Audited
 public class Employee {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -19,8 +23,9 @@ public class Employee {
 	@Column(name="name")
 	private String name;
 	
-	@Version
-	private long version;
+	@NotAudited
+	@Column(name="password")
+	private String password;
 
 	public Long getId() {
 		return id;
@@ -38,17 +43,17 @@ public class Employee {
 		this.name = name;
 	}
 	
-	public long getVersion() {
-		return version;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setVersion(long version) {
-		this.version = version;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + "]";
+		return "Employee [id=" + id + ", name=" + name + ", password=" + password + "]";
 	}
 	
 }

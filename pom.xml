@@ -34,7 +34,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>5.4.24.Final</version>
+			<version>5.2.2.Final</version>
 		</dependency>
 
 		<!-- Log4j -->
@@ -52,18 +52,17 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.11</version>
 		</dependency>
-		
-		<!-- Se agrega EhCache: es util para ejercicios de SecondLevelCache -->
-		<dependency>
-			<groupId>net.sf.ehcache</groupId>
-			<artifactId>ehcache-core</artifactId>
-			<version>2.6.9</version>
-		</dependency>
+
+
+
+		<!-- Se agrega envers, se utiliza para el uso de la historia de un objeto -->
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-envers -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-ehcache</artifactId>
-			<version>4.3.5.Final</version>
+			<artifactId>hibernate-envers</artifactId>
+			<version>5.2.8.Final</version>
 		</dependency>
-		
+
+
 	</dependencies>
 </project>
