@@ -4,12 +4,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.hibernate</groupId>
 	<artifactId>java-hibernate-cookbook</artifactId>
+	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-
 	<!-- Java 8 -->
 	<properties>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
+		<spring-framework.version>4.0.3.RELEASE</spring-framework.version>
+		<hibernate.version>4.3.5.Final</hibernate.version>
 	</properties>
 
 	<dependencies>
@@ -34,7 +36,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>5.4.24.Final</version>
+			<version>${hibernate.version}</version>
 		</dependency>
 
 		<!-- Log4j -->
@@ -52,5 +54,23 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.11</version>
 		</dependency>
+		
+		<!-- spring 4-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring-framework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring-framework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring-framework.version}</version>
+		</dependency>
+		
 	</dependencies>
 </project>

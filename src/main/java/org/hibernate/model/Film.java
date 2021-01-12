@@ -8,19 +8,26 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="employee")
-public class Employee {
+@Table(name="film")
+public class Film {
+	public Film() {}
+	
+	public Film(String name,long releaseYear) {
+		super();
+		this.name=name;
+		this.releaseYear=releaseYear;
+	}
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="id")
 	private Long id;
 	
-	@Column(name="name")
+	@Column
 	private String name;
 	
-	@Column(name="password")
-	private String password;
-
+	@Column
+	private Long releaseYear;
+	
 	public Long getId() {
 		return id;
 	}
@@ -36,18 +43,18 @@ public class Employee {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	public String getPassword() {
-		return password;
+
+	public Long getReleaseYear() {
+		return releaseYear;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setReleaseYear(Long releaseYear) {
+		this.releaseYear = releaseYear;
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", password=" + password + "]";
+		return "Film [id=" + id + ", name=" + name + ", releaseYear=" + releaseYear + "]";
 	}
 	
 }
