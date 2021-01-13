@@ -10,7 +10,7 @@
 	<properties>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
-		<spring-framework.version>4.0.3.RELEASE</spring-framework.version>
+		<struts2-core.version>2.3.24</struts2-core.version>
 		<hibernate.version>4.3.5.Final</hibernate.version>
 	</properties>
 
@@ -54,23 +54,25 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.11</version>
 		</dependency>
-		
-		<!-- spring 4-->
+
+		<!-- Struts -->
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${spring-framework.version}</version>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+			<version>${struts2-core.version}</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
-			<version>${spring-framework.version}</version>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-			<version>${spring-framework.version}</version>
-		</dependency>
-		
+
+
 	</dependencies>
+	<build>
+		<finalName>StrutsHibernate</finalName>
+	</build>
 </project>

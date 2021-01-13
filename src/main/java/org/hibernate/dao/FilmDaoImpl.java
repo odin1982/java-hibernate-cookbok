@@ -10,12 +10,12 @@ import org.hibernate.criterion.Restrictions;
 import org.hibernate.model.Film;
 
 public class FilmDaoImpl implements FilmDao{
-	SessionFactory sessionFactory;
+	private SessionFactory sessionFactory;
 
-	public void setSessionFactory(SessionFactory sessionFactory) {
+	public FilmDaoImpl(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
-
+	
 	public void save(Film film) {
 		Session session = this.sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
@@ -29,15 +29,6 @@ public class FilmDaoImpl implements FilmDao{
 		List<Film> filmList = session.createQuery("from Film").list();
 		session.close();
 		return filmList;
-	}
-
-	public Film getById(Long filmId) {
-		Session session = this.sessionFactory.openSession();
-		Criteria criteria = session.createCriteria(Film.class);
-		criteria.add(Restrictions.eq("id", filmId));
-		Film film = (Film) criteria.uniqueResult();
-		session.close();
-		return film;
 	}
 
 }

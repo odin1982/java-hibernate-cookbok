@@ -4,7 +4,7 @@
     
 <hibernate-configuration>
 	<session-factory>
-		<property name="hibernate.dialect">org.hibernate.dialect.MySQL55Dialect</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/jhibernatecookbook?useSSL=false&amp;serverTimezone=America/Mexico_City&amp;allowPublicKeyRetrieval=true</property>
 		<property name="hibernate.connection.username">root</property>
@@ -13,7 +13,6 @@
 		<property name="hibernate.format_sql">true</property><!-- pretty format hibernate queries -->
 		<!--Possible values: validate,update,create,create-drop -->
 		<property name="hbm2ddl.auto">create</property>
-		<property name="hibernate.jdbc.batch_size">50</property>
-		<property name="hibernate.cache.use_second_level_cache">false</property>
+		<mapping class="org.hibernate.model.Film"/>
 	</session-factory>
 </hibernate-configuration>
